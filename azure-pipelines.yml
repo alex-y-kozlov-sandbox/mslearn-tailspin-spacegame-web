@@ -54,4 +54,5 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
-  name: mslearn-tailspin-spacegame-web-artifacts
+  inputs:
+    ArtifactName: mslearn-tailspin-spacegame-web-artifacts
