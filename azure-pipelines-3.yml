@@ -1,0 +1,21 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: SnykSecurityScan@0
+    inputs:
+      serviceConnectionEndpoint: 'snyk-alex-y-kozlov'
+      testType: 'app'
+      severityThreshold: 'medium'
+      monitorOnBuild: true
+      failOnIssues: true
+      projectName: 'Space Game - web - Workflow (Aaz Dev)'
+      organization: '8a387038-95f2-4e2e-8799-fe3eca4731a6'
