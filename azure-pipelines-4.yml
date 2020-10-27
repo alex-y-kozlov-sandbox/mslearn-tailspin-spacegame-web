@@ -13,6 +13,7 @@ steps:
 
 - task: QualysWASConnector@1
   inputs:
+    webApplication: '89163073-alg-web'
     scanType: 'VULNERABILITY'
     authenticationRecord: 'Use Default'
     cancelOptions: 'Cancel After X Hours'
@@ -23,4 +24,3 @@ steps:
     dataCheckFrequency: '5'
     waitTimeforScanResult: '60*24'
     WasService: 'qualys-kozlova-wwt-01'
-    WebApplication: TeaStore-PublicIP
