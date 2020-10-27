@@ -23,3 +23,4 @@ steps:
     dataCheckFrequency: '5'
     waitTimeforScanResult: '60*24'
     WasService: 'qualys-kozlova-wwt-01'
+    WebApplication: TeaStore-PublicIP
