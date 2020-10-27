@@ -15,7 +15,8 @@ steps:
   inputs:
     webApplication: '89163073-alg-web'
     scanType: 'VULNERABILITY'
-    authenticationRecord: 'Use Default'
+    optionProfile: 'Other'
+    profileName: '1677883'
     cancelOptions: 'Cancel After X Hours'
     failBySeverity1: true
     sev1: '1'
