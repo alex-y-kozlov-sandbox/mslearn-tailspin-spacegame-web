@@ -10,10 +10,16 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: QualysWASConnector@1
+  inputs:
+    scanType: 'VULNERABILITY'
+    authenticationRecord: 'Use Default'
+    cancelOptions: 'Cancel After X Hours'
+    failBySeverity1: true
+    sev1: '1'
+    failBySeverity2: true
+    sev2: '1'
+    dataCheckFrequency: '5'
+    waitTimeforScanResult: '60*24'
+    WasService: 'qualys-kozlova-wwt-01'
